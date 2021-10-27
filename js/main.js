@@ -57,3 +57,10 @@ for (i = 0; i < imageCollection.length; i++) {
             <img src="${imageCollection[i]}" alt="Lorem">
         </div>`
 }
+
+let activeImage = 1;
+
+document.getElementsByClassName('image-container')[activeImage].classList.add('active');
+document.getElementsByClassName('thumb')[activeImage].classList.add('active');
+
+
