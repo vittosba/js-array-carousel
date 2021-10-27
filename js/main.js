@@ -67,12 +67,12 @@ const next = document.querySelector('.next');
 
 next.addEventListener('click', 
     function() {
-        if (activeImage === imageCollection.length - 1) {
-            activeImage = 0;
+        prev.classList.remove('d-none');
+
+        if (activeImage === imageCollection.length - 2) {
+            next.classList.add('d-none');
         }
-        else {
-            activeImage++;
-        }
+        activeImage++;
         
         document.querySelector('.image-container.active').classList.remove('active');
         document.getElementsByClassName('image-container')[activeImage].classList.add('active');
@@ -85,12 +85,12 @@ const prev = document.querySelector('.prev');
 
 prev.addEventListener('click', 
     function() {
-        if (activeImage === 0) {
-            activeImage = imageCollection.length - 1;
+        next.classList.remove('d-none');
+
+        if (activeImage === 1) {
+            prev.classList.add('d-none');
         }
-        else {
-            activeImage--;
-        }
+        activeImage--;
         
         document.querySelector('.image-container.active').classList.remove('active');
         document.getElementsByClassName('image-container')[activeImage].classList.add('active');

@@ -100,3 +100,7 @@ body {
 .thumbs .next {
     bottom: 10px;
 }
+
+.d-none {
+    display: none;
+}
